@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
     'import_export',
-    'flet_django',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'E_commerce_basic.urls'
+ROOT_URLCONF = 'E_shop_app.urls'
 
 TEMPLATES = [
     {
