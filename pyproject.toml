@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "djangoproject"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+
+# Basic Django setup packages
+python = "^3.11"
+django = "^4.2.4"
+environ = "^1.0"
+beret-utils = "^0.4.8"
+
+# Package essential when using Postgresql.
+
+psycopg2 = "^2.9.6"
+
+# packages below are required by various functions of an e-commerce site,
+# if using Django>4.1 and Python>3.11 most should be already installed.
+# If uncertain check with 'pip show package_name' command.
+
+asgiref = "^3.7.2"
+sqlparse = "^0.4.4"
+pillow = "^10.0.0"
+flower = "^2.0.0"
+
+# Celery documentation is here https://docs.celeryq.dev/en/latest/
+
+celery = "^5.3.1"
+
+# for Stripe and pdf printing there will be extra packages required:
+# Stripe python package https://pypi.org/project/stripe/
+# Stripe payment API documentation: https://stripe.com/docs
+# WeasyPrint document factory https://doc.courtbouillon.org/weasyprint/stable/
+
+stripe = "^5.5.0"
+weasyprint = "^59.0"
+
+# package to facilitate import/export from and to csv, xls, json, yaml and other formats
+# documentation:
+# https://django-import-export.readthedocs.io/en/latest/getting_started.html#creating-import-export-resource
+
+django-import-export = "^3.2.0"
+
+
+[build-system]
+
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
