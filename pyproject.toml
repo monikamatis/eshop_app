@@ -44,6 +44,7 @@ weasyprint = "^59.0"
 # https://django-import-export.readthedocs.io/en/latest/getting_started.html#creating-import-export-resource
 
 django-import-export = "^3.2.0"
+# gobject = "^2.0"
 
 
 [build-system]

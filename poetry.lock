@@ -666,6 +666,16 @@ unicode = ["unicodedata2 (>=15.0.0)"]
 woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
 
 [[package]]
+name = "gobject"
+version = "0.1.0"
+description = "Pythonic Google Geocode API wrapper"
+optional = false
+python-versions = "*"
+files = [
+    {file = "gobject-0.1.0-py3-none-any.whl", hash = "sha256:e985e17809810e7bd0bc2d34cb6c9ee6abde6cde94d89855e889a3f836b056b5"},
+]
+
+[[package]]
 name = "html5lib"
 version = "1.1"
 description = "HTML parser based on the WHATWG HTML specification"
@@ -1333,4 +1343,4 @@ test = ["pytest"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "320326a54293bd74c1e6228d713d8d2b2579cc8f60a894f5fa92293798bb888a"
+content-hash = "21298e10a67db33817caf18e1c8ca0754e36f65a70faed26cbde046072e2ad88"
