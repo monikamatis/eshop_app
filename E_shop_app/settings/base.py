@@ -15,8 +15,10 @@ from pathlib import Path
 from config import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# added extra parent level after moving configuration to settings directory
+# with added versions for local and production environments
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -25,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -79,26 +81,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'E_shop_app.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    # "default": {
-    #     "ENGINE": "django.db.backends.sqlite3",
-    #     "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    # }
-    'default': {
-        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # Add DB name or path to db file if using sqlite3.
-        'NAME': config.POSTGRES_DB,
-        'USER': config.POSTGRES_USER,
-        'PASSWORD': config.POSTGRES_PASSWORD,
-        'HOST': config.POSTGRES_HOST,
-        'PORT': config.POSTGRES_PORT,
-    },
-}
+#
+# # Database
+# # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+#
+# DATABASES = {
+#     # "default": {
+#     #     "ENGINE": "django.db.backends.sqlite3",
+#     #     "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+#     # }
+#     'default': {
+#         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         # Add DB name or path to db file if using sqlite3.
+#         'NAME': config.POSTGRES_DB,
+#         'USER': config.POSTGRES_USER,
+#         'PASSWORD': config.POSTGRES_PASSWORD,
+#         'HOST': config.POSTGRES_HOST,
+#         'PORT': config.POSTGRES_PORT,
+#     },
+# }
 
 
 # Password validation
@@ -144,7 +146,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../../Media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
