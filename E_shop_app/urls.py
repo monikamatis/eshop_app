@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
-from . import settings
+from E_shop_app.settings import local
 
 # add more restrictive patterns before less restrictive!
 urlpatterns = [
@@ -29,6 +29,6 @@ urlpatterns = [
 
 # changed setting for media URl as only valid for DEBUG=TRUE
 # it will require change in production.
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+if local.DEBUG:
+    urlpatterns += static(local.MEDIA_URL,
+                          document_root=local.MEDIA_ROOT)

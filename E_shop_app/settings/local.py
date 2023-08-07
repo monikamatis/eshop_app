@@ -24,3 +24,6 @@ DATABASES = {
         'PORT': config.POSTGRES_PORT,
     },
 }
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
